@@ -5,28 +5,35 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import ResumeDownload from "./components/ResumeDownload";
+import About from "./components/About";
 import "./scss/custom.scss";
 
 export default function App() {
   return (
     <div className="app-container">
       {/* Navigation */}
-      <header className="nav-bar">
-        <nav className="nav-wrapper">
-          <h1 className="logo">Seddik</h1>
-          <ul className="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+      <header className="nav-bar top-left">
+        <div className="logo">Seddik</div>
+        <nav className="nav-links-horizontal">
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
         </nav>
       </header>
 
       {/* Content */}
       <main className="main-content">
-        <motion.section id="hero" className="section">
+        <motion.section id="hero" className="section hero-full centered-hero">
           <Hero />
+          <div className="scroll-down">
+            <a href="#about" aria-label="Scroll Down">
+              <div className="arrow" />
+            </a>
+          </div>
+        </motion.section>
+
+        <motion.section id="about" className="section">
+          <About />
         </motion.section>
 
         <motion.section id="projects" className="section">

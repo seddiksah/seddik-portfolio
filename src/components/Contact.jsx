@@ -1,23 +1,15 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
-    <section className="contact-section">
-      <h2 className="section-title">Contact</h2>
+    <section className="contact-section" id="contact">
+      <h2 className="section-title">Get In Touch</h2>
 
-      <form
-        className="contact-form"
-        onSubmit={(e) => {
-          e.preventDefault();
-          alert("This form is a placeholder. To make it functional, connect it to an email service.");
-        }}
-      >
-        <input type="text" placeholder="Your Name" className="contact-input" />
-        <input type="email" placeholder="Your Email" className="contact-input" />
-        <textarea placeholder="Your Message" rows="5" className="contact-textarea" />
-        <button type="submit" className="contact-button">Send Message</button>
-      </form>
+      <p className="contact-description">
+        I'm currently looking for internship opportunities in Software Engineering or Machine Learning!<br />
+        If you know of any positions available, or just want to connect, feel free to email me at{" "}
+        <a href="mailto:seddiksahraoui1@gmail.com">seddiksahraoui123@gmail.com</a>.
+      </p>
     </section>
   );
 }
